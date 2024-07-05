@@ -21,7 +21,8 @@ class SecurityConfiguration {
         authorizedClientRepository: ServerOAuth2AuthorizedClientRepository
     ): ReactiveOAuth2AuthorizedClientManager {
         val authorizedClientProvider = ReactiveOAuth2AuthorizedClientProviderBuilder.builder()
-            .clientCredentials()
+            .authorizationCode()
+//            .clientCredentials()
             .build()
 
         val authorizedClientManager =
